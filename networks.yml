@@ -72,7 +72,7 @@
 # admin_oc_net_routes:
 
 # Overcloud out-of-band management network IP information.
-# oob_oc_net_cidr:
+oob_oc_net_cidr: 192.168.4.0/24
 # oob_oc_net_allocation_pool_start:
 # oob_oc_net_allocation_pool_end:
 # oob_oc_net_inspection_allocation_pool_start:
@@ -83,15 +83,17 @@
 # oob_oc_net_routes:
 
 # Overcloud provisioning network IP information.
-# provision_oc_net_cidr:
-# provision_oc_net_allocation_pool_start:
-# provision_oc_net_allocation_pool_end:
+provision_oc_net_cidr: 192.168.3.0/24
+provision_oc_net_allocation_pool_start: 192.168.3.100
+provision_oc_net_allocation_pool_end: 192.168.3.200
 # provision_oc_net_inspection_allocation_pool_start:
 # provision_oc_net_inspection_allocation_pool_end:
-# provision_oc_net_gateway:
+provision_oc_net_gateway: 192.168.3.1
 # provision_oc_net_vlan:
 # provision_oc_net_mtu:
-# provision_oc_net_routes:
+provision_oc_net_routes:
+  - cidr: 192.168.4.0/24
+    gateway: 192.168.3.254
 
 # Workload out-of-band management network IP information.
 # oob_wl_net_cidr:
