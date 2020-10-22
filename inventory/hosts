@@ -8,9 +8,10 @@ localhost ansible_connection=local
 [seed-hypervisor]
 # Add a seed hypervisor node here if required. This host will run a seed node
 # Virtual Machine.
-messy-maas ansible_host=192.168.3.1
+messy-maas ansible_host=192.168.3.1 ansible_python_interpreter=/usr/bin/python3
 
 [seed]
+seed-vm
 # Add a seed node here if required. This host will provide the Bifrost
 # undercloud.
 
